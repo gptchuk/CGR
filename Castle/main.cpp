@@ -105,6 +105,18 @@ void drawFloor (float x_axis, float y_axis)
         glVertex3f( -x, 0, -y);
     glEnd();
 }
+
+void drawFlag(float scale)
+{
+    float s = scale / 2.0f;
+
+    glBegin(GL_TRIANGLES);
+        glVertex3f(0.0f, s, 0.0f);
+        glVertex3f(0.0f, -s, 0.0f);
+        glVertex3f(3*s, 0.0f, 0.0f);
+    glEnd();
+}
+
 void drawCuboid(float x_axis, float y_axis, float z_axis)
 {
     float x = x_axis / 2.0f;
@@ -185,15 +197,15 @@ void drawGLScene(GLFWwindow* window)
     //right wall
 	glColor3f(0.9f, 0.9f, 0.9f);  
 	glPushMatrix();
-		glTranslatef(0.8f, 0.0f, 0.0f);
-        drawCuboid(0.4f, 2.0f, 1.5f);
+		glTranslatef(0.85f, 0.0f, 0.0f);
+        drawCuboid(0.3f, 2.0f, 1.5f);
 	glPopMatrix();
 
     //left wall
 	glColor3f(0.9f, 0.9f, 0.9f);  
 	glPushMatrix();
-		glTranslatef(-0.8f, 0.0f, 0.0f);
-        drawCuboid(0.4f, 2.0f, 1.5f);
+		glTranslatef(-0.85f, 0.0f, 0.0f);
+        drawCuboid(0.3f, 2.0f, 1.5f);
 	glPopMatrix();
     
     //back wall
@@ -206,44 +218,23 @@ void drawGLScene(GLFWwindow* window)
     //left front wall
 	glColor3f(0.9f, 0.9f, 0.9f);  
 	glPushMatrix();
-		glTranslatef(-0.4f, 0.0f, 0.5f);
+		glTranslatef(-0.4f, 0.0f, 0.75f);
         drawCuboid(0.5f, 0.4f, 1.5f);
 	glPopMatrix();
 
     //right front wall
 	glColor3f(0.9f, 0.9f, 0.9f);  
 	glPushMatrix();
-		glTranslatef(0.4f, 0.0f, 0.5f);
+		glTranslatef(0.4f, 0.0f, 0.75f);
         drawCuboid(0.5f, 0.4f, 1.5f);
 	glPopMatrix();
 
-    //mid center top wall
-	glColor3f(0.9f, 0.9f, 0.9f);  
+    // top wall
+	glColor3f(1.0f, 1.0f, 1.0f); 
 	glPushMatrix();
-		glTranslatef(0.0f, 0.7f, 0.6f);
-        drawCuboid(1.0f, 0.8f, 0.2f);
+		glTranslatef(0.0f, 0.7f, -0.1f);
+        drawCuboid(2.1f, 2.3f, 0.2f);
 	glPopMatrix();
-
-    //left top wall
-    glColor3f(0.9f, 0.9f, 0.9f);  
-	glPushMatrix();
-		glTranslatef(-0.9f, 0.7f, -0.2f);
-        drawCuboid(0.3f, 2.1f, 0.2f);
-	glPopMatrix();
-
-    //right top wall
-    glColor3f(0.9f, 0.9f, 0.9f);  
-	glPushMatrix();
-		glTranslatef(0.9f, 0.7f, -0.2f);
-        drawCuboid(0.3f, 2.1f, 0.2f);
-	glPopMatrix();
- 
-    //back top wall
-    glColor3f(0.9f, 0.9f, 0.9f);  
-	glPushMatrix();
-		glTranslatef(0.0f, 0.7f, -1.1f);
-        drawCuboid(2.1f, 0.3f, 0.2f);
-	glPopMatrix(); 
 
     //left front tower
 	glColor3f(0.9f, 0.9f, 0.9f);  
@@ -324,6 +315,83 @@ void drawGLScene(GLFWwindow* window)
         glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
         gluCylinder(pObj, 0.0f, 0.3f, 0.5f, 26, 13);
 	glPopMatrix();
+
+    //central flag
+    glColor3f(1.0f, 0.0f, 0.0f);  
+	glPushMatrix();
+		glTranslatef(0.0f, 2.2f, -0.3f);
+        drawFlag(0.35f);
+	glPopMatrix();
+
+    //central flagpole
+    glColor3f(0.3f, 0.3f, 0.3f);  
+	glPushMatrix();
+		glTranslatef(0.0f, 2.38f, -0.3f);
+        glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
+        gluCylinder(pObj, 0.02f, 0.02f, 0.7f, 26, 13);
+	glPopMatrix();
+
+    //front righ flag
+    glColor3f(1.0f, 0.0f, 0.0f);  
+	glPushMatrix();
+		glTranslatef(0.9f, 1.7f, 0.9f);
+        drawFlag(0.2f);
+	glPopMatrix();
+
+    //flont right flagpole
+    glColor3f(0.3f, 0.3f, 0.3f);  
+	glPushMatrix();
+		glTranslatef(0.9f, 1.8f, 0.9f);
+        glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
+        gluCylinder(pObj, 0.015f, 0.015f, 0.7f, 26, 13);
+	glPopMatrix();
+
+    //front left flag
+    glColor3f(1.0f, 0.0f, 0.0f);  
+	glPushMatrix();
+		glTranslatef(-0.9f, 1.7f, 0.9f);
+        drawFlag(0.2f);
+	glPopMatrix();
+
+    //flont left flagpole
+    glColor3f(0.3f, 0.3f, 0.3f);  
+	glPushMatrix();
+		glTranslatef(-0.9f, 1.8f, 0.9f);
+        glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
+        gluCylinder(pObj, 0.015f, 0.015f, 0.7f, 26, 13);
+	glPopMatrix();
+
+
+    //back righ flag
+    glColor3f(1.0f, 0.0f, 0.0f);  
+	glPushMatrix();
+		glTranslatef(0.9f, 1.7f, -1.1f);
+        drawFlag(0.2f);
+	glPopMatrix();
+
+    //back right flagpole
+    glColor3f(0.3f, 0.3f, 0.3f);  
+	glPushMatrix();
+		glTranslatef(0.9f, 1.8f, -1.1f);
+        glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
+        gluCylinder(pObj, 0.015f, 0.015f, 0.7f, 26, 13);
+	glPopMatrix();
+
+    //back left flag
+    glColor3f(1.0f, 0.0f, 0.0f);  
+	glPushMatrix();
+		glTranslatef(-0.9f, 1.7f, -1.1f);
+        drawFlag(0.2f);
+	glPopMatrix();
+
+    //back left flagpole
+    glColor3f(0.3f, 0.3f, 0.3f);  
+	glPushMatrix();
+		glTranslatef(-0.9f, 1.8f, -1.1f);
+        glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
+        gluCylinder(pObj, 0.015f, 0.015f, 0.7f, 26, 13);
+	glPopMatrix();
+
 
     // Restore the matrix state  
     glPopMatrix();  
