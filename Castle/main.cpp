@@ -167,7 +167,7 @@ void drawGLScene(GLFWwindow* window)
 	// Move object back and do in place rotation  
 	glTranslatef(0.0f, -1.0f, -5.0f);  
 	glRotatef(yRot, 0.0f, 1.0f, 0.0f);
-	glRotatef(5.0f, 1.0f, 0.0f, 1.0f);    
+	glRotatef(0.0f, 0.0f, 0.0f, 0.0f);    
 
 	// Draw something  
 	pObj = gluNewQuadric();
@@ -181,25 +181,150 @@ void drawGLScene(GLFWwindow* window)
 	glPopMatrix();
 
     // castle cuboids
+
+    //right wall
 	glColor3f(0.9f, 0.9f, 0.9f);  
 	glPushMatrix();
-		glTranslatef(1.0f, 0.0f, 0.0f);
-        drawCuboid(0.4f, 2.0f, 1.0f);
+		glTranslatef(0.8f, 0.0f, 0.0f);
+        drawCuboid(0.4f, 2.0f, 1.5f);
 	glPopMatrix();
 
+    //left wall
 	glColor3f(0.9f, 0.9f, 0.9f);  
 	glPushMatrix();
-		glTranslatef(-1.0f, 0.0f, 0.0f);
-        drawCuboid(0.4f, 2.0f, 1.0f);
+		glTranslatef(-0.8f, 0.0f, 0.0f);
+        drawCuboid(0.4f, 2.0f, 1.5f);
 	glPopMatrix();
     
+    //back wall
 	glColor3f(0.9f, 0.9f, 0.9f);  
 	glPushMatrix();
 		glTranslatef(0.0f, 0.0f, -1.0f);
-        drawCuboid(2.0f, 0.4f, 1.0f);
+        drawCuboid(2.0f, 0.4f, 1.5f);
 	glPopMatrix();
-	
-          
+
+    //left front wall
+	glColor3f(0.9f, 0.9f, 0.9f);  
+	glPushMatrix();
+		glTranslatef(-0.4f, 0.0f, 0.5f);
+        drawCuboid(0.5f, 0.4f, 1.5f);
+	glPopMatrix();
+
+    //right front wall
+	glColor3f(0.9f, 0.9f, 0.9f);  
+	glPushMatrix();
+		glTranslatef(0.4f, 0.0f, 0.5f);
+        drawCuboid(0.5f, 0.4f, 1.5f);
+	glPopMatrix();
+
+    //mid center top wall
+	glColor3f(0.9f, 0.9f, 0.9f);  
+	glPushMatrix();
+		glTranslatef(0.0f, 0.7f, 0.6f);
+        drawCuboid(1.0f, 0.8f, 0.2f);
+	glPopMatrix();
+
+    //left top wall
+    glColor3f(0.9f, 0.9f, 0.9f);  
+	glPushMatrix();
+		glTranslatef(-0.9f, 0.7f, -0.2f);
+        drawCuboid(0.3f, 2.1f, 0.2f);
+	glPopMatrix();
+
+    //right top wall
+    glColor3f(0.9f, 0.9f, 0.9f);  
+	glPushMatrix();
+		glTranslatef(0.9f, 0.7f, -0.2f);
+        drawCuboid(0.3f, 2.1f, 0.2f);
+	glPopMatrix();
+ 
+    //back top wall
+    glColor3f(0.9f, 0.9f, 0.9f);  
+	glPushMatrix();
+		glTranslatef(0.0f, 0.7f, -1.1f);
+        drawCuboid(2.1f, 0.3f, 0.2f);
+	glPopMatrix(); 
+
+    //left front tower
+	glColor3f(0.9f, 0.9f, 0.9f);  
+	glPushMatrix();
+		glTranslatef(-0.9f, 1.0f, 0.9f);
+        glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
+        gluCylinder(pObj, 0.25f, 0.25f, 4.0f, 26, 13);
+	glPopMatrix(); 
+    
+    //right front tower
+    glColor3f(0.9f, 0.9f, 0.9f);  
+	glPushMatrix();
+		glTranslatef(0.9f, 1.0f, 0.9f);
+        glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
+        gluCylinder(pObj, 0.25f, 0.25f, 4.0f, 26, 13);
+	glPopMatrix();  
+    
+    //left front cone
+    glColor3f(1.0f, 0.0f, 0.0f);  
+	glPushMatrix();
+		glTranslatef(-0.9f, 1.5f, 0.9f);
+        glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
+        gluCylinder(pObj, 0.0f, 0.3f, 0.5f, 26, 13);
+	glPopMatrix();
+
+    //right front cone
+    glColor3f(1.0f, 0.0f, 0.0f);  
+	glPushMatrix();
+		glTranslatef(0.9f, 1.5f, 0.9f);
+        glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
+        gluCylinder(pObj, 0.0f, 0.3f, 0.5f, 26, 13);
+	glPopMatrix();
+    
+    //central tower
+    glColor3f(0.9f, 0.9f, 0.9f);  
+	glPushMatrix();
+		glTranslatef(0.0f, 1.4f, -0.3f);
+        glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
+        gluCylinder(pObj, 0.4f, 0.4f, 2.0f, 26, 13);
+	glPopMatrix();
+
+    //central cone
+    glColor3f(1.0f, 0.0f, 0.0f);  
+	glPushMatrix();
+		glTranslatef(0.0f, 2.0f, -0.3f);
+        glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
+        gluCylinder(pObj, 0.0f, 0.5f, 0.7f, 26, 13);
+	glPopMatrix();
+
+    //left back tower
+	glColor3f(0.9f, 0.9f, 0.9f);  
+	glPushMatrix();
+		glTranslatef(-0.9f, 1.0f, -1.1f);
+        glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
+        gluCylinder(pObj, 0.25f, 0.25f, 4.0f, 26, 13);
+	glPopMatrix(); 
+    
+    //right back tower
+    glColor3f(0.9f, 0.9f, 0.9f);  
+	glPushMatrix();
+		glTranslatef(0.9f, 1.0f, -1.1f);
+        glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
+        gluCylinder(pObj, 0.25f, 0.25f, 4.0f, 26, 13);
+	glPopMatrix();  
+    
+    //left back cone
+    glColor3f(1.0f, 0.0f, 0.0f);  
+	glPushMatrix();
+		glTranslatef(-0.9f, 1.5f, -1.1f);
+        glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
+        gluCylinder(pObj, 0.0f, 0.3f, 0.5f, 26, 13);
+	glPopMatrix();
+
+    //right back cone
+    glColor3f(1.0f, 0.0f, 0.0f);  
+	glPushMatrix();
+		glTranslatef(0.9f, 1.5f, -1.1f);
+        glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
+        gluCylinder(pObj, 0.0f, 0.3f, 0.5f, 26, 13);
+	glPopMatrix();
+
     // Restore the matrix state  
     glPopMatrix();  
 }
