@@ -11,7 +11,7 @@ echo ====================================================
 if exist programa.exe del programa.exe
 
 :: Comando de compilação usando o g++ (MinGW)
-g++ main.cpp src/* -I include -L lib -lglfw3 -lopengl32 -lglu32 -lgdi32 -o programa.exe
+g++ main.cpp src/glad.c -I include -L lib -lglfw3 -lopengl32 -lglu32 -lgdi32 -o programa.exe
 
 :: Verifica se o g++ gerou o arquivo com sucesso
 if %ERRORLEVEL% EQU 0 (
