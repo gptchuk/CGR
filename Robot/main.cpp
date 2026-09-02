@@ -116,32 +116,247 @@ void drawGLScene(GLFWwindow* window)
 
     // main body
 	glPushMatrix();
-		glTranslatef(0.0f, 3.5f, 0.0f);
+		glTranslatef(0.0f, 3.4f, 0.0f);
 		gluSphere(pObj, 1.1f, 26, 13);
 	glPopMatrix();
 
     // shouders
 	glPushMatrix();
-		glTranslatef(0.8f, 3.5f, 0.0f);
-		gluSphere(pObj, 0.8f, 26, 13);
+		glTranslatef(0.9f, 3.5f, 0.0f);
+		gluSphere(pObj, 0.7f, 26, 13);
 	glPopMatrix();
 
 	glPushMatrix();
-		glTranslatef(-0.8f, 3.5f, 0.0f);
-		gluSphere(pObj, 0.8f, 26, 13);
+		glTranslatef(-0.9f, 3.5f, 0.0f);
+		gluSphere(pObj, 0.7f, 26, 13);
 	glPopMatrix();
 
-    // hip
+    // midhip
 	glPushMatrix();
 		glTranslatef(0.0f, 1.5f, 0.0f);
 		gluSphere(pObj, 0.7f, 26, 13);
 	glPopMatrix();
           
+    //left hip
+	glPushMatrix();
+		glTranslatef(-0.5f, 1.2f, 0.0f);
+		gluSphere(pObj, 0.5f, 26, 13);
+	glPopMatrix();
+
+    //right hip
+	glPushMatrix();
+		glTranslatef(0.5f, 1.2f, 0.0f);
+		gluSphere(pObj, 0.5f, 26, 13);
+	glPopMatrix();
+
+    //left leg
+	glColor3f(0.3f, 0.3f, 0.3f);  
+	glPushMatrix();
+		glTranslatef(-0.5f, 1.0f, 0.0f);
+        glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
+        gluCylinder(pObj, 0.20f, 0.20f, 1.6f, 26, 13);
+	glPopMatrix();
+
+    //right leg
+	glPushMatrix();
+		glTranslatef(0.5f, 1.0f, 0.0f);
+        glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
+        gluCylinder(pObj, 0.20f, 0.20f, 1.6f, 26, 13);
+	glPopMatrix();
+
+    //left feet
+	glColor3f(1.0f, 1.0f, 1.0f);  
+	glPushMatrix();
+		glTranslatef(-0.5f, -0.5f, 0.0f);
+        glRotatef(10.0f, 1.0f, 0.0f, 0.0f);
+        gluCylinder(pObj, 0.30f, 0.30f, 0.6f, 26, 13);
+	glPopMatrix();
+
+    glPushMatrix();
+		glTranslatef(-0.5f, -0.6f, 0.6f);
+		gluSphere(pObj, 0.3f, 26, 13);
+	glPopMatrix();
+
+    glPushMatrix();
+		glTranslatef(-0.5f, -0.5f, 0.0f);
+		gluSphere(pObj, 0.3f, 26, 13);
+	glPopMatrix();
+
+    //left knee
+	glPushMatrix();
+		glTranslatef(-0.5f, 0.3f, 0.0f);
+		gluSphere(pObj, 0.3f, 26, 13);
+	glPopMatrix();
+
+    //right feet
+	glColor3f(1.0f, 1.0f, 1.0f);  
+	glPushMatrix();
+		glTranslatef(0.5f, -0.5f, 0.0f);
+        glRotatef(10.0f, 1.0f, 0.0f, 0.0f);
+        gluCylinder(pObj, 0.30f, 0.30f, 0.6f, 26, 13);
+	glPopMatrix();
+
+    glPushMatrix();
+		glTranslatef(0.5f, -0.6f, 0.6f);
+		gluSphere(pObj, 0.3f, 26, 13);
+	glPopMatrix();
+
+    glPushMatrix();
+		glTranslatef(0.5f, -0.5f, 0.0f);
+		gluSphere(pObj, 0.3f, 26, 13);
+	glPopMatrix();
+
+    //right knee
+	glPushMatrix();
+		glTranslatef(0.5f, 0.3f, 0.0f);
+		gluSphere(pObj, 0.3f, 26, 13);
+	glPopMatrix();
+
+    //left arm
+    glColor3f(0.3f, 0.3f, 0.3f);  
+	glPushMatrix();
+		glTranslatef(-1.2f, 3.2f, 0.0f);
+        glRotatef(45.0f, 1.0f, -1.0f, 0.0f);
+        gluCylinder(pObj, 0.30f, 0.30f, 1.5f, 26, 13);
+	glPopMatrix();
+
+    //left hand
+    glColor3f(1.0f, 1.0f, 1.0f);
+    glPushMatrix();
+	    glTranslatef(-1.9f, 2.5f, 1.0f);
+		gluSphere(pObj, 0.40f, 26, 13);
+	glPopMatrix();
+    
+    //left fingers
+	glPushMatrix();
+		glTranslatef(-1.9f, 3.1f, 1.0f);
+        glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
+        gluCylinder(pObj, 0.10f, 0.10f, 0.5f, 26, 13);
+	glPopMatrix();
+
+    glPushMatrix();
+	    glTranslatef(-1.9f, 3.1f, 1.0f);
+		gluSphere(pObj, 0.1f, 26, 13);
+	glPopMatrix();
+
+    glPushMatrix();
+		glTranslatef(-1.9f, 2.6f, 1.2f);
+        glRotatef(90.0f, 0.0f, 1.0f, 0.0f);
+        gluCylinder(pObj, 0.10f, 0.10f, 0.5f, 26, 13);
+	glPopMatrix();    
+    
+    glPushMatrix();
+		glTranslatef(-1.9f, 2.5f, 1.2f);
+        glRotatef(90.0f, 0.0f, 1.0f, 0.0f);
+        gluCylinder(pObj, 0.10f, 0.10f, 0.5f, 26, 13);
+	glPopMatrix();
+
+    glPushMatrix();
+		glTranslatef(-1.9f, 2.4f, 1.2f);
+        glRotatef(90.0f, 0.0f, 1.0f, 0.0f);
+        gluCylinder(pObj, 0.10f, 0.10f, 0.5f, 26, 13);
+	glPopMatrix();
+
+    glPushMatrix();
+		glTranslatef(-1.9f, 2.3f, 1.2f);
+        glRotatef(90.0f, 0.0f, 1.0f, 0.0f);
+        gluCylinder(pObj, 0.10f, 0.10f, 0.5f, 26, 13);
+	glPopMatrix();
+
+    glPushMatrix();
+	    glTranslatef(-1.4f, 2.3f, 1.2f);
+		gluSphere(pObj, 0.1f, 26, 13);
+	glPopMatrix();
+
+    glPushMatrix();
+	    glTranslatef(-1.4f, 2.4f, 1.2f);
+		gluSphere(pObj, 0.1f, 26, 13);
+	glPopMatrix();
+
+    glPushMatrix();
+	    glTranslatef(-1.4f, 2.5f, 1.2f);
+		gluSphere(pObj, 0.1f, 26, 13);
+	glPopMatrix();
+
+    glPushMatrix();
+	    glTranslatef(-1.4f, 2.6f, 1.2f);
+		gluSphere(pObj, 0.1f, 26, 13);
+	glPopMatrix();
+
+    glPushMatrix();
+	    glTranslatef(1.9f, 2.5f, 1.0f);
+		gluSphere(pObj, 0.40f, 26, 13);
+	glPopMatrix();
+    
+    //right fingers
+	glPushMatrix();
+		glTranslatef(1.9f, 3.1f, 1.0f);
+        glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
+        gluCylinder(pObj, 0.10f, 0.10f, 0.5f, 26, 13);
+	glPopMatrix();
+
+    glPushMatrix();
+	    glTranslatef(1.9f, 3.1f, 1.0f);
+		gluSphere(pObj, 0.1f, 26, 13);
+	glPopMatrix();
+
+    glPushMatrix();
+		glTranslatef(1.9f, 2.6f, 1.2f);
+        glRotatef(-90.0f, 0.0f, 1.0f, 0.0f);
+        gluCylinder(pObj, 0.10f, 0.10f, 0.5f, 26, 13);
+	glPopMatrix();    
+    
+    glPushMatrix();
+		glTranslatef(1.9f, 2.5f, 1.2f);
+        glRotatef(-90.0f, 0.0f, 1.0f, 0.0f);
+        gluCylinder(pObj, 0.10f, 0.10f, 0.5f, 26, 13);
+	glPopMatrix();
+
+    glPushMatrix();
+		glTranslatef(1.9f, 2.4f, 1.2f);
+        glRotatef(-90.0f, 0.0f, 1.0f, 0.0f);
+        gluCylinder(pObj, 0.10f, 0.10f, 0.5f, 26, 13);
+	glPopMatrix();
+
+    glPushMatrix();
+		glTranslatef(1.9f, 2.3f, 1.2f);
+        glRotatef(-90.0f, 0.0f, 1.0f, 0.0f);
+        gluCylinder(pObj, 0.10f, 0.10f, 0.5f, 26, 13);
+	glPopMatrix();
+
+    glPushMatrix();
+	    glTranslatef(1.4f, 2.3f, 1.2f);
+		gluSphere(pObj, 0.1f, 26, 13);
+	glPopMatrix();
+
+    glPushMatrix();
+	    glTranslatef(1.4f, 2.4f, 1.2f);
+		gluSphere(pObj, 0.1f, 26, 13);
+	glPopMatrix();
+
+    glPushMatrix();
+	    glTranslatef(1.4f, 2.5f, 1.2f);
+		gluSphere(pObj, 0.1f, 26, 13);
+	glPopMatrix();
+
+    glPushMatrix();
+	    glTranslatef(1.4f, 2.6f, 1.2f);
+		gluSphere(pObj, 0.1f, 26, 13);
+	glPopMatrix();
+
+    //right arm
+    glColor3f(0.3f, 0.3f, 0.3f);  
+	glPushMatrix();
+		glTranslatef(1.2f, 3.2f, 0.0f);
+        glRotatef(45.0f, 1.0f, 1.0f, 0.0f);
+        gluCylinder(pObj, 0.30f, 0.30f, 1.5f, 26, 13);
+	glPopMatrix();
+
     // dark gray
 	glColor3f(0.3f, 0.3f, 0.3f);
     
 	glPushMatrix();
-		glTranslatef(0.0f, 2.5f, 0.0f);
+		glTranslatef(0.0f, 2.4f, 0.0f);
 		gluSphere(pObj, 0.5f, 26, 13);
 	glPopMatrix();
 
