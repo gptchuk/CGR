@@ -104,17 +104,41 @@ void drawGLScene(GLFWwindow* window)
     glPushMatrix();
 
 	// Move object back and do in place rotation  
-	glTranslatef(0.0f, -2.0f, -10.0f);  
+	glTranslatef(0.0f, -2.0f, -15.0f);  
 	glRotatef(yRot, 0.0f, 1.0f, 0.0f);  
 
 	// Draw something  
 	pObj = gluNewQuadric();
 	gluQuadricNormals(pObj, GLU_SMOOTH);  
 
-	// white
-	glColor3f(1.0f, 1.0f, 1.0f);  
+
+    // head
+	glColor3f(1.0f, 1.0f, 1.0f); 
+	glPushMatrix();
+		glTranslatef(0.0f, 4.6f, 0.1f);
+		gluSphere(pObj, 0.6f, 26, 13);
+	glPopMatrix();
+
+	glColor3f(0.5f, 0.8f, 1.0f); 
+	glPushMatrix();
+		glTranslatef(0.0f, 4.6f, 0.25f);
+		gluSphere(pObj, 0.5f, 26, 13);
+	glPopMatrix();
+
+    // eyes
+	glColor3f(0.3f, 0.3f, 0.3f); 
+	glPushMatrix();
+		glTranslatef(-0.15f, 4.6f, 0.65f);
+		gluSphere(pObj, 0.12f, 26, 13);
+	glPopMatrix();
+    
+	glPushMatrix();
+		glTranslatef(0.15f, 4.6f, 0.65f);
+		gluSphere(pObj, 0.12f, 26, 13);
+	glPopMatrix();
 
     // main body
+	glColor3f(1.0f, 1.0f, 1.0f);  
 	glPushMatrix();
 		glTranslatef(0.0f, 3.4f, 0.0f);
 		gluSphere(pObj, 1.1f, 26, 13);
@@ -154,14 +178,27 @@ void drawGLScene(GLFWwindow* window)
 	glPushMatrix();
 		glTranslatef(-0.5f, 1.0f, 0.0f);
         glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
-        gluCylinder(pObj, 0.20f, 0.20f, 1.6f, 26, 13);
+        gluCylinder(pObj, 0.20f, 0.20f, 0.6f, 26, 13);
 	glPopMatrix();
+
+	glPushMatrix();
+		glTranslatef(-0.5f, 0.2f, 0.0f);
+        glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
+        gluCylinder(pObj, 0.20f, 0.20f, 0.6f, 26, 13);
+	glPopMatrix();
+
 
     //right leg
 	glPushMatrix();
 		glTranslatef(0.5f, 1.0f, 0.0f);
         glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
-        gluCylinder(pObj, 0.20f, 0.20f, 1.6f, 26, 13);
+        gluCylinder(pObj, 0.20f, 0.20f, 0.6f, 26, 13);
+	glPopMatrix();
+
+	glPushMatrix();
+		glTranslatef(0.5f, 0.2f, 0.0f);
+        glRotatef(90.0f, 1.0f, 0.0f, 0.0f);
+        gluCylinder(pObj, 0.20f, 0.20f, 0.6f, 26, 13);
 	glPopMatrix();
 
     //left feet
