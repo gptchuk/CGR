@@ -12,14 +12,17 @@
 void processInput(GLFWwindow *window);
 
 // settings
-#define SCREEN_WIDTH  600
-#define SCREEN_HEIGHT 600
+static float SCREEN_WIDTH = 600;
+static float SCREEN_HEIGHT = 600;
 
 /* for the particles */
 #define NUM_PARTICLES 3000
 #define GRAVITY 0.0003
 
 static int fireworkDelay = 0;
+
+#define WIND_MAX 0.5f
+#define WIND_MIN -0.5f
 static float wind = 0.01f;
 
 struct s_pf {
@@ -42,7 +45,9 @@ void resizeWindow(GLFWwindow* window, int w, int h )
     // Set Viewport to window dimensions  
     glViewport(0, 0, w, h);  
   
-    fAspect = (GLfloat)w/(GLfloat)h;  
+    fAspect = (GLfloat)w/(GLfloat)h;
+    SCREEN_WIDTH = w;
+    SCREEN_HEIGHT = h;
   
     // Reset coordinate system  
     glMatrixMode(GL_PROJECTION);  
@@ -65,40 +70,40 @@ void handleKeyPress(GLFWwindow *window)
         glfwTerminate();
         exit(EXIT_SUCCESS);
     }
-    float windMax = 0.5f, windMin = -0.5f;
     if(glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS) 
-        if(wind >= windMin) wind -= 0.001f;
+        if(wind >= WIND_MIN) wind -= 0.001f;
   
     if(glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS)  
-        if(wind <= windMax) wind += 0.001f;
-                   
+        if(wind <= WIND_MAX) wind += 0.001f;
 
 }
 // Initialize the firework
 void InitFirework()
 {
-  int i;
+    int i;
+    float start_point_x = (float)(rand() % 100)/100.0;
+    float start_point_y = (float)(rand() % 100)/100.0;
 
-  for(i=0;i<NUM_PARTICLES;i++) {
-    float velocity = (float)(rand() % 100)/5000.0;
-    int angle = rand() % 360;
-    fireworkParticles[i].veloc_x = cos( (M_PI * angle/180.0) ) * velocity;
-    fireworkParticles[i].veloc_y = sin( (M_PI * angle/180.0) ) * velocity;
-    fireworkParticles[i].x = 0.0;
-    fireworkParticles[i].y = 0.0;
-    fireworkParticles[i].lifetime = rand() % 100;
-  }
+    for(i=0;i<NUM_PARTICLES;i++) {
+        float velocity = (float)(rand() % 100)/5000.0;
+        int angle = rand() % 360;
+        fireworkParticles[i].veloc_x = cos( (M_PI * angle/180.0) ) * velocity;
+        fireworkParticles[i].veloc_y = sin( (M_PI * angle/180.0) ) * velocity;
+        fireworkParticles[i].x = start_point_x;
+        fireworkParticles[i].y = start_point_y;
+        fireworkParticles[i].lifetime = rand() % 100;
+    }
 }
 
 void fireworks(GLFWwindow* window)
 {
-    int i, ative_particles=0;
-
+    int i, active_particles=0;
     /* Draw points of the firework */
+    glColor3f(0.0f, 1.0f, 0.0f);
     glBegin(GL_POINTS);
     for(i=0;i<NUM_PARTICLES;i++) {
         if(fireworkParticles[i].lifetime) {
-            ative_particles++;
+            active_particles++;
             fireworkParticles[i].veloc_y -= GRAVITY;
             fireworkParticles[i].x += fireworkParticles[i].veloc_x;
             fireworkParticles[i].y += fireworkParticles[i].veloc_y;
@@ -110,7 +115,7 @@ void fireworks(GLFWwindow* window)
     glEnd();
 
     // if no active firework particles, wait some frames before restart
-    if(!ative_particles) {
+    if(!active_particles) {
         if(fireworkDelay <= 0) {
             InitFirework();
             fireworkDelay = 30 + rand() % 30; // ~ 0.5s to 1.0s at 60fps
@@ -126,7 +131,7 @@ void SpawnRainDrop(int i)
     rainParticles[i].x = ((float)(rand() % 400) / 100.0f) - 2.0f;
     rainParticles[i].y = 2.0f + ((float)(rand() % 200) / 100.0f);
 
-    // vento + uma pequena variação aleatória por partícula (mais natural)
+    // wind + random variance
     rainParticles[i].veloc_x = wind + (((float)(rand() % 20) / 1000.0f) - 0.01f);
     rainParticles[i].veloc_y = -(0.01f + (float)(rand() % 50) / 5000.0f);
 
@@ -147,6 +152,7 @@ void rain(GLFWwindow* window)
     int i;
 
     /* Draw points of the rain */
+    glColor3f(1.0f, 1.0f, 1.0f);
     glBegin(GL_POINTS);
     for(i=0;i<NUM_PARTICLES;i++) {
         // Updates the drop's position
@@ -172,7 +178,7 @@ void drawGLScene(GLFWwindow* window)
     glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
 
     rain(window);
-    
+    fireworks(window);
     // pauses render loop for 0.0001s 
     usleep(100);
 
