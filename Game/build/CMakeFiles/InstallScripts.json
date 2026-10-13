@@ -1,0 +1,9 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Repositories/CGR/Game/build/cmake_install.cmake",
+		"C:/Repositories/CGR/Game/build/glfw/cmake_install.cmake",
+		"C:/Repositories/CGR/Game/build/glfw/src/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

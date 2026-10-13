@@ -1,0 +1,10 @@
+C:/Repositories/CGR/Game/build/CMakeFiles/glad.dir
+C:/Repositories/CGR/Game/build/CMakeFiles/OpenGLProject.dir
+C:/Repositories/CGR/Game/build/CMakeFiles/edit_cache.dir
+C:/Repositories/CGR/Game/build/CMakeFiles/rebuild_cache.dir
+C:/Repositories/CGR/Game/build/glfw/CMakeFiles/edit_cache.dir
+C:/Repositories/CGR/Game/build/glfw/CMakeFiles/rebuild_cache.dir
+C:/Repositories/CGR/Game/build/glfw/src/CMakeFiles/glfw.dir
+C:/Repositories/CGR/Game/build/glfw/src/CMakeFiles/update_mappings.dir
+C:/Repositories/CGR/Game/build/glfw/src/CMakeFiles/edit_cache.dir
+C:/Repositories/CGR/Game/build/glfw/src/CMakeFiles/rebuild_cache.dir
