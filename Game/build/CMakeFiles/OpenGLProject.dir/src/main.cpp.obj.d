@@ -447,6 +447,15 @@ CMakeFiles/OpenGLProject.dir/src/main.cpp.obj: \
  C:/mingw64/include/c++/15.2.0/pstl/glue_algorithm_defs.h \
  C:/mingw64/include/c++/15.2.0/pstl/execution_defs.h \
  C:/Repositories/CGR/Game/src/utils/mathUtils.hpp \
+ C:/Repositories/CGR/Game/src/utils/timeUtils.hpp \
  C:\Repositories\CGR\Game\src\scene/scene.hpp \
  C:\Repositories\CGR\Game\src\input/input.hpp \
- C:/Repositories/CGR/Game/src/camera/camera.hpp
+ C:/Repositories/CGR/Game/src/camera/camera.hpp \
+ C:\Repositories\CGR\Game\src\GameObject/gameObject.hpp \
+ C:\Repositories\CGR\Game\src\GameObject/Collider/Collider.hpp \
+ C:\Repositories\CGR\Game\src\GameObject/Render/Render.hpp \
+ C:/mingw64/include/c++/15.2.0/vector \
+ C:/mingw64/include/c++/15.2.0/bits/stl_uninitialized.h \
+ C:/mingw64/include/c++/15.2.0/bits/stl_vector.h \
+ C:/mingw64/include/c++/15.2.0/bits/stl_bvector.h \
+ C:/mingw64/include/c++/15.2.0/bits/vector.tcc

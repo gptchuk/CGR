@@ -6,6 +6,7 @@
 #include <algorithm>
 
 #include "utils/mathUtils.hpp"
+#include "utils/timeUtils.hpp"
 
 class Camera {
     private: // variables
@@ -15,8 +16,7 @@ class Camera {
             ux, uy, uz, // Up vector
             rx, ry, rz, // Right vector
             wx, wy, wz, // World Up vector
-            dt, velocity; // delta time
-        double previousTime, currentTime;
+            velocity; // delta time
 
     public: // variables
         float
@@ -40,13 +40,9 @@ class Camera {
             Sensitivity = 0.1;
             NearPlane = 0.1;
             FarPlane = 1000.0;
-            previousTime = 0.1f;
         }
         void update(){
-            currentTime = glfwGetTime();
-            dt = std::min(static_cast<float>(currentTime - previousTime), 0.1f);
-            previousTime = currentTime;
-            velocity = Speed * dt;
+            velocity = Speed * deltaTime(glfwGetTime());
 
             Yaw = fmodf(Yaw, 360.0f);
 
@@ -85,36 +81,19 @@ class Camera {
             );
         }
 
-        void setCameraPos(float xx, float yy, float zz) {
-            x = xx;
-            y = yy;
-            z = zz;
-        }
-
     public:
-        void cameraMovement_FORWARD() {
-            x += fx * velocity;
-            y += fy * velocity;
-            z += fz * velocity;
-        }
-        void cameraMovement_BACKWARD() {
-            x -= fx * velocity;
-            y -= fy * velocity;
-            z -= fz * velocity;
-        }
-        void cameraMovement_RIGHT() {
-            x += rx * velocity;
-            z += rz * velocity;
-        }
-        void cameraMovement_LEFT() {
-            x -= rx * velocity;
-            z -= rz * velocity;
-        }
-        void cameraMovement_UPWARD() {
-            y += velocity;
-        }
-        void cameraMovement_DOWNWARD() {
-            y -= velocity;
+        void move(float forward, float right, float up) {
+            float dx = fx * forward + rx * right;
+            float dy = fy * forward + up;
+            float dz = fz * forward + rz * right;
+
+            float len = std::sqrt(dx*dx + dy*dy + dz*dz);
+            if (len < 1e-6f) return;          // sem input, ou W+S se cancelando
+
+            float k = velocity / len;
+            x += dx * k;
+            y += dy * k;
+            z += dz * k;
         }
 
         float getCameraFov() { return Fov; }

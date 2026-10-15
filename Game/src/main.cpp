@@ -5,6 +5,7 @@
 #include "camera/camera.hpp"
 #include "scene/scene.hpp"
 #include "input/input.hpp"
+#include "GameObject/gameObject.hpp"
 
 Camera camera;
 
@@ -86,6 +87,7 @@ int main() {
         // ------------------------
 
         drawGrid();
+        drawObjects(window);
 
         glfwSwapBuffers(window);
         glfwPollEvents();

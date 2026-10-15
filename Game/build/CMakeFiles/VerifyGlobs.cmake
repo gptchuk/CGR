@@ -4,12 +4,14 @@
 # PROJECT_SOURCES at CMakeLists.txt:69 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Repositories/CGR/Game/src/*.cpp")
 set(OLD_GLOB
+  "C:/Repositories/CGR/Game/src/GameObject/gameObject.cpp"
   "C:/Repositories/CGR/Game/src/camera/camera.cpp"
   "C:/Repositories/CGR/Game/src/graphics/renderer/projection.cpp"
   "C:/Repositories/CGR/Game/src/input/input.cpp"
   "C:/Repositories/CGR/Game/src/main.cpp"
   "C:/Repositories/CGR/Game/src/scene/scene.cpp"
   "C:/Repositories/CGR/Game/src/utils/mathUtils.cpp"
+  "C:/Repositories/CGR/Game/src/utils/timeUtils.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

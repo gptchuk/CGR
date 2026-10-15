@@ -352,4 +352,5 @@ CMakeFiles/OpenGLProject.dir/src/input/input.cpp.obj: \
  C:/mingw64/include/c++/15.2.0/bits/stl_construct.h \
  C:/mingw64/include/c++/15.2.0/pstl/glue_algorithm_defs.h \
  C:/mingw64/include/c++/15.2.0/pstl/execution_defs.h \
- C:/Repositories/CGR/Game/src/utils/mathUtils.hpp
+ C:/Repositories/CGR/Game/src/utils/mathUtils.hpp \
+ C:/Repositories/CGR/Game/src/utils/timeUtils.hpp

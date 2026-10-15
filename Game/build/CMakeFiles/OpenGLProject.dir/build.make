@@ -71,11 +71,26 @@ include CMakeFiles/OpenGLProject.dir/flags.make
 CMakeFiles/OpenGLProject.dir/codegen:
 .PHONY : CMakeFiles/OpenGLProject.dir/codegen
 
+CMakeFiles/OpenGLProject.dir/src/GameObject/gameObject.cpp.obj: CMakeFiles/OpenGLProject.dir/flags.make
+CMakeFiles/OpenGLProject.dir/src/GameObject/gameObject.cpp.obj: CMakeFiles/OpenGLProject.dir/includes_CXX.rsp
+CMakeFiles/OpenGLProject.dir/src/GameObject/gameObject.cpp.obj: C:/Repositories/CGR/Game/src/GameObject/gameObject.cpp
+CMakeFiles/OpenGLProject.dir/src/GameObject/gameObject.cpp.obj: CMakeFiles/OpenGLProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Repositories\CGR\Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/OpenGLProject.dir/src/GameObject/gameObject.cpp.obj"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGLProject.dir/src/GameObject/gameObject.cpp.obj -MF CMakeFiles\OpenGLProject.dir\src\GameObject\gameObject.cpp.obj.d -o CMakeFiles\OpenGLProject.dir\src\GameObject\gameObject.cpp.obj -c C:\Repositories\CGR\Game\src\GameObject\gameObject.cpp
+
+CMakeFiles/OpenGLProject.dir/src/GameObject/gameObject.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/OpenGLProject.dir/src/GameObject/gameObject.cpp.i"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Repositories\CGR\Game\src\GameObject\gameObject.cpp > CMakeFiles\OpenGLProject.dir\src\GameObject\gameObject.cpp.i
+
+CMakeFiles/OpenGLProject.dir/src/GameObject/gameObject.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/OpenGLProject.dir/src/GameObject/gameObject.cpp.s"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Repositories\CGR\Game\src\GameObject\gameObject.cpp -o CMakeFiles\OpenGLProject.dir\src\GameObject\gameObject.cpp.s
+
 CMakeFiles/OpenGLProject.dir/src/camera/camera.cpp.obj: CMakeFiles/OpenGLProject.dir/flags.make
 CMakeFiles/OpenGLProject.dir/src/camera/camera.cpp.obj: CMakeFiles/OpenGLProject.dir/includes_CXX.rsp
 CMakeFiles/OpenGLProject.dir/src/camera/camera.cpp.obj: C:/Repositories/CGR/Game/src/camera/camera.cpp
 CMakeFiles/OpenGLProject.dir/src/camera/camera.cpp.obj: CMakeFiles/OpenGLProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Repositories\CGR\Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/OpenGLProject.dir/src/camera/camera.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Repositories\CGR\Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/OpenGLProject.dir/src/camera/camera.cpp.obj"
 	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGLProject.dir/src/camera/camera.cpp.obj -MF CMakeFiles\OpenGLProject.dir\src\camera\camera.cpp.obj.d -o CMakeFiles\OpenGLProject.dir\src\camera\camera.cpp.obj -c C:\Repositories\CGR\Game\src\camera\camera.cpp
 
 CMakeFiles/OpenGLProject.dir/src/camera/camera.cpp.i: cmake_force
@@ -90,7 +105,7 @@ CMakeFiles/OpenGLProject.dir/src/graphics/renderer/projection.cpp.obj: CMakeFile
 CMakeFiles/OpenGLProject.dir/src/graphics/renderer/projection.cpp.obj: CMakeFiles/OpenGLProject.dir/includes_CXX.rsp
 CMakeFiles/OpenGLProject.dir/src/graphics/renderer/projection.cpp.obj: C:/Repositories/CGR/Game/src/graphics/renderer/projection.cpp
 CMakeFiles/OpenGLProject.dir/src/graphics/renderer/projection.cpp.obj: CMakeFiles/OpenGLProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Repositories\CGR\Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/OpenGLProject.dir/src/graphics/renderer/projection.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Repositories\CGR\Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/OpenGLProject.dir/src/graphics/renderer/projection.cpp.obj"
 	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGLProject.dir/src/graphics/renderer/projection.cpp.obj -MF CMakeFiles\OpenGLProject.dir\src\graphics\renderer\projection.cpp.obj.d -o CMakeFiles\OpenGLProject.dir\src\graphics\renderer\projection.cpp.obj -c C:\Repositories\CGR\Game\src\graphics\renderer\projection.cpp
 
 CMakeFiles/OpenGLProject.dir/src/graphics/renderer/projection.cpp.i: cmake_force
@@ -105,7 +120,7 @@ CMakeFiles/OpenGLProject.dir/src/input/input.cpp.obj: CMakeFiles/OpenGLProject.d
 CMakeFiles/OpenGLProject.dir/src/input/input.cpp.obj: CMakeFiles/OpenGLProject.dir/includes_CXX.rsp
 CMakeFiles/OpenGLProject.dir/src/input/input.cpp.obj: C:/Repositories/CGR/Game/src/input/input.cpp
 CMakeFiles/OpenGLProject.dir/src/input/input.cpp.obj: CMakeFiles/OpenGLProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Repositories\CGR\Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/OpenGLProject.dir/src/input/input.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Repositories\CGR\Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/OpenGLProject.dir/src/input/input.cpp.obj"
 	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGLProject.dir/src/input/input.cpp.obj -MF CMakeFiles\OpenGLProject.dir\src\input\input.cpp.obj.d -o CMakeFiles\OpenGLProject.dir\src\input\input.cpp.obj -c C:\Repositories\CGR\Game\src\input\input.cpp
 
 CMakeFiles/OpenGLProject.dir/src/input/input.cpp.i: cmake_force
@@ -120,7 +135,7 @@ CMakeFiles/OpenGLProject.dir/src/main.cpp.obj: CMakeFiles/OpenGLProject.dir/flag
 CMakeFiles/OpenGLProject.dir/src/main.cpp.obj: CMakeFiles/OpenGLProject.dir/includes_CXX.rsp
 CMakeFiles/OpenGLProject.dir/src/main.cpp.obj: C:/Repositories/CGR/Game/src/main.cpp
 CMakeFiles/OpenGLProject.dir/src/main.cpp.obj: CMakeFiles/OpenGLProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Repositories\CGR\Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/OpenGLProject.dir/src/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Repositories\CGR\Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/OpenGLProject.dir/src/main.cpp.obj"
 	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGLProject.dir/src/main.cpp.obj -MF CMakeFiles\OpenGLProject.dir\src\main.cpp.obj.d -o CMakeFiles\OpenGLProject.dir\src\main.cpp.obj -c C:\Repositories\CGR\Game\src\main.cpp
 
 CMakeFiles/OpenGLProject.dir/src/main.cpp.i: cmake_force
@@ -135,7 +150,7 @@ CMakeFiles/OpenGLProject.dir/src/scene/scene.cpp.obj: CMakeFiles/OpenGLProject.d
 CMakeFiles/OpenGLProject.dir/src/scene/scene.cpp.obj: CMakeFiles/OpenGLProject.dir/includes_CXX.rsp
 CMakeFiles/OpenGLProject.dir/src/scene/scene.cpp.obj: C:/Repositories/CGR/Game/src/scene/scene.cpp
 CMakeFiles/OpenGLProject.dir/src/scene/scene.cpp.obj: CMakeFiles/OpenGLProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Repositories\CGR\Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/OpenGLProject.dir/src/scene/scene.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Repositories\CGR\Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/OpenGLProject.dir/src/scene/scene.cpp.obj"
 	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGLProject.dir/src/scene/scene.cpp.obj -MF CMakeFiles\OpenGLProject.dir\src\scene\scene.cpp.obj.d -o CMakeFiles\OpenGLProject.dir\src\scene\scene.cpp.obj -c C:\Repositories\CGR\Game\src\scene\scene.cpp
 
 CMakeFiles/OpenGLProject.dir/src/scene/scene.cpp.i: cmake_force
@@ -150,7 +165,7 @@ CMakeFiles/OpenGLProject.dir/src/utils/mathUtils.cpp.obj: CMakeFiles/OpenGLProje
 CMakeFiles/OpenGLProject.dir/src/utils/mathUtils.cpp.obj: CMakeFiles/OpenGLProject.dir/includes_CXX.rsp
 CMakeFiles/OpenGLProject.dir/src/utils/mathUtils.cpp.obj: C:/Repositories/CGR/Game/src/utils/mathUtils.cpp
 CMakeFiles/OpenGLProject.dir/src/utils/mathUtils.cpp.obj: CMakeFiles/OpenGLProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Repositories\CGR\Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/OpenGLProject.dir/src/utils/mathUtils.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Repositories\CGR\Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/OpenGLProject.dir/src/utils/mathUtils.cpp.obj"
 	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGLProject.dir/src/utils/mathUtils.cpp.obj -MF CMakeFiles\OpenGLProject.dir\src\utils\mathUtils.cpp.obj.d -o CMakeFiles\OpenGLProject.dir\src\utils\mathUtils.cpp.obj -c C:\Repositories\CGR\Game\src\utils\mathUtils.cpp
 
 CMakeFiles/OpenGLProject.dir/src/utils/mathUtils.cpp.i: cmake_force
@@ -161,31 +176,50 @@ CMakeFiles/OpenGLProject.dir/src/utils/mathUtils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/OpenGLProject.dir/src/utils/mathUtils.cpp.s"
 	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Repositories\CGR\Game\src\utils\mathUtils.cpp -o CMakeFiles\OpenGLProject.dir\src\utils\mathUtils.cpp.s
 
+CMakeFiles/OpenGLProject.dir/src/utils/timeUtils.cpp.obj: CMakeFiles/OpenGLProject.dir/flags.make
+CMakeFiles/OpenGLProject.dir/src/utils/timeUtils.cpp.obj: CMakeFiles/OpenGLProject.dir/includes_CXX.rsp
+CMakeFiles/OpenGLProject.dir/src/utils/timeUtils.cpp.obj: C:/Repositories/CGR/Game/src/utils/timeUtils.cpp
+CMakeFiles/OpenGLProject.dir/src/utils/timeUtils.cpp.obj: CMakeFiles/OpenGLProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Repositories\CGR\Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/OpenGLProject.dir/src/utils/timeUtils.cpp.obj"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGLProject.dir/src/utils/timeUtils.cpp.obj -MF CMakeFiles\OpenGLProject.dir\src\utils\timeUtils.cpp.obj.d -o CMakeFiles\OpenGLProject.dir\src\utils\timeUtils.cpp.obj -c C:\Repositories\CGR\Game\src\utils\timeUtils.cpp
+
+CMakeFiles/OpenGLProject.dir/src/utils/timeUtils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/OpenGLProject.dir/src/utils/timeUtils.cpp.i"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Repositories\CGR\Game\src\utils\timeUtils.cpp > CMakeFiles\OpenGLProject.dir\src\utils\timeUtils.cpp.i
+
+CMakeFiles/OpenGLProject.dir/src/utils/timeUtils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/OpenGLProject.dir/src/utils/timeUtils.cpp.s"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Repositories\CGR\Game\src\utils\timeUtils.cpp -o CMakeFiles\OpenGLProject.dir\src\utils\timeUtils.cpp.s
+
 # Object files for target OpenGLProject
 OpenGLProject_OBJECTS = \
+"CMakeFiles/OpenGLProject.dir/src/GameObject/gameObject.cpp.obj" \
 "CMakeFiles/OpenGLProject.dir/src/camera/camera.cpp.obj" \
 "CMakeFiles/OpenGLProject.dir/src/graphics/renderer/projection.cpp.obj" \
 "CMakeFiles/OpenGLProject.dir/src/input/input.cpp.obj" \
 "CMakeFiles/OpenGLProject.dir/src/main.cpp.obj" \
 "CMakeFiles/OpenGLProject.dir/src/scene/scene.cpp.obj" \
-"CMakeFiles/OpenGLProject.dir/src/utils/mathUtils.cpp.obj"
+"CMakeFiles/OpenGLProject.dir/src/utils/mathUtils.cpp.obj" \
+"CMakeFiles/OpenGLProject.dir/src/utils/timeUtils.cpp.obj"
 
 # External object files for target OpenGLProject
 OpenGLProject_EXTERNAL_OBJECTS =
 
+OpenGLProject.exe: CMakeFiles/OpenGLProject.dir/src/GameObject/gameObject.cpp.obj
 OpenGLProject.exe: CMakeFiles/OpenGLProject.dir/src/camera/camera.cpp.obj
 OpenGLProject.exe: CMakeFiles/OpenGLProject.dir/src/graphics/renderer/projection.cpp.obj
 OpenGLProject.exe: CMakeFiles/OpenGLProject.dir/src/input/input.cpp.obj
 OpenGLProject.exe: CMakeFiles/OpenGLProject.dir/src/main.cpp.obj
 OpenGLProject.exe: CMakeFiles/OpenGLProject.dir/src/scene/scene.cpp.obj
 OpenGLProject.exe: CMakeFiles/OpenGLProject.dir/src/utils/mathUtils.cpp.obj
+OpenGLProject.exe: CMakeFiles/OpenGLProject.dir/src/utils/timeUtils.cpp.obj
 OpenGLProject.exe: CMakeFiles/OpenGLProject.dir/build.make
 OpenGLProject.exe: glfw/src/libglfw3.a
 OpenGLProject.exe: libglad.a
 OpenGLProject.exe: CMakeFiles/OpenGLProject.dir/linkLibs.rsp
 OpenGLProject.exe: CMakeFiles/OpenGLProject.dir/objects1.rsp
 OpenGLProject.exe: CMakeFiles/OpenGLProject.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Repositories\CGR\Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable OpenGLProject.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Repositories\CGR\Game\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable OpenGLProject.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\OpenGLProject.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

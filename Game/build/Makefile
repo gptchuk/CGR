@@ -192,6 +192,30 @@ external/glad/src/glad.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\glad.dir\build.make CMakeFiles/glad.dir/external/glad/src/glad.c.s
 .PHONY : external/glad/src/glad.c.s
 
+src/GameObject/gameObject.obj: src/GameObject/gameObject.cpp.obj
+.PHONY : src/GameObject/gameObject.obj
+
+# target to build an object file
+src/GameObject/gameObject.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OpenGLProject.dir\build.make CMakeFiles/OpenGLProject.dir/src/GameObject/gameObject.cpp.obj
+.PHONY : src/GameObject/gameObject.cpp.obj
+
+src/GameObject/gameObject.i: src/GameObject/gameObject.cpp.i
+.PHONY : src/GameObject/gameObject.i
+
+# target to preprocess a source file
+src/GameObject/gameObject.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OpenGLProject.dir\build.make CMakeFiles/OpenGLProject.dir/src/GameObject/gameObject.cpp.i
+.PHONY : src/GameObject/gameObject.cpp.i
+
+src/GameObject/gameObject.s: src/GameObject/gameObject.cpp.s
+.PHONY : src/GameObject/gameObject.s
+
+# target to generate assembly for a file
+src/GameObject/gameObject.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OpenGLProject.dir\build.make CMakeFiles/OpenGLProject.dir/src/GameObject/gameObject.cpp.s
+.PHONY : src/GameObject/gameObject.cpp.s
+
 src/camera/camera.obj: src/camera/camera.cpp.obj
 .PHONY : src/camera/camera.obj
 
@@ -336,6 +360,30 @@ src/utils/mathUtils.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\OpenGLProject.dir\build.make CMakeFiles/OpenGLProject.dir/src/utils/mathUtils.cpp.s
 .PHONY : src/utils/mathUtils.cpp.s
 
+src/utils/timeUtils.obj: src/utils/timeUtils.cpp.obj
+.PHONY : src/utils/timeUtils.obj
+
+# target to build an object file
+src/utils/timeUtils.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OpenGLProject.dir\build.make CMakeFiles/OpenGLProject.dir/src/utils/timeUtils.cpp.obj
+.PHONY : src/utils/timeUtils.cpp.obj
+
+src/utils/timeUtils.i: src/utils/timeUtils.cpp.i
+.PHONY : src/utils/timeUtils.i
+
+# target to preprocess a source file
+src/utils/timeUtils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OpenGLProject.dir\build.make CMakeFiles/OpenGLProject.dir/src/utils/timeUtils.cpp.i
+.PHONY : src/utils/timeUtils.cpp.i
+
+src/utils/timeUtils.s: src/utils/timeUtils.cpp.s
+.PHONY : src/utils/timeUtils.s
+
+# target to generate assembly for a file
+src/utils/timeUtils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OpenGLProject.dir\build.make CMakeFiles/OpenGLProject.dir/src/utils/timeUtils.cpp.s
+.PHONY : src/utils/timeUtils.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -351,6 +399,9 @@ help:
 	@echo ... external/glad/src/glad.obj
 	@echo ... external/glad/src/glad.i
 	@echo ... external/glad/src/glad.s
+	@echo ... src/GameObject/gameObject.obj
+	@echo ... src/GameObject/gameObject.i
+	@echo ... src/GameObject/gameObject.s
 	@echo ... src/camera/camera.obj
 	@echo ... src/camera/camera.i
 	@echo ... src/camera/camera.s
@@ -369,6 +420,9 @@ help:
 	@echo ... src/utils/mathUtils.obj
 	@echo ... src/utils/mathUtils.i
 	@echo ... src/utils/mathUtils.s
+	@echo ... src/utils/timeUtils.obj
+	@echo ... src/utils/timeUtils.i
+	@echo ... src/utils/timeUtils.s
 .PHONY : help
 
 
